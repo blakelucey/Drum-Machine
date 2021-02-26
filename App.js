@@ -65,7 +65,7 @@ class App extends React.Component  {
     };
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.playSound = this.playsound.bind(this);
+    this.playSound = this.playSound.bind(this);
   }
 
   //Define Component Did Mount, Component Will Unmount & playSound//
