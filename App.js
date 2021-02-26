@@ -1,6 +1,7 @@
 import './App.css';
 import DrumPad from './DrumPad.js';
 import React from 'react';
+import Display from './Display.js';
 
 const Sounds = [{
   name: 'Cowbell',
@@ -105,7 +106,7 @@ handleClick(event) {
   return (
     <div id='drum-machine'>
     <div id='container'>
-    <div id='display'>{message}</div>
+
     {
       Object.keys(Sounds).map(s => (
       <DrumPad
@@ -114,9 +115,10 @@ handleClick(event) {
         source={s.source}
         />
     ))}
+<Display currentSoundText={message} />
+    </div>
+    </div>
 
-    </div>
-    </div>
   );
 }
 }
