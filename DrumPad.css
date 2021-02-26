@@ -1,10 +1,56 @@
-.DrumPad {
+body {
+    background-color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+#drum-machine {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto ;
+}
+
+
+
+.drum-pad {
+  width: 70px;
+  height: 70px;
+  border: 5px solid black;
+  margin: auto;
+  font-size: 2em;
+  text-align: center;
+  line-height: 70px;
+  justify-self: center;
+}
+
+.drum-pad:hover {
+  transform: scale(1.1);
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 90px 90px 90px;
+  grid-template-columns: 90px 90px 90px;
+}
+
+#display {
+  align-self: end;
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: auto;
+  margin-top: 50%;
+  left: 50%;
+  bottom: 100;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Share Tech Mono', monospace;
   background-color: white;
   color: black;
-  height: 100px;
-  width: 100px;
 }

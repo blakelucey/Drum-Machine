@@ -103,15 +103,15 @@ handleClick(event) {
       this.playSound();
     }
   return (
-    <div id='drum-machine' className='container'>
-    <div className="App">
+    <div id='drum-machine'>
+    <div id='container'>
     <div id='display'>{message}</div>
     {
       Object.keys(Sounds).map(s => (
       <DrumPad
         id = {s.name}
         letter={s.key}
-        src={s.source}
+        source={s.source}
         />
     ))}
 
