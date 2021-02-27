@@ -4,8 +4,8 @@ import './DrumPad.css';
 class DrumPad extends React.Component{
   render() {
     return(
-      <div className = 'drum-pad' id = {this.props.name}>
-        <p>{this.props.key}</p>
+      <div className = 'drum-pad' id = {this.props.name} onClick = {this.handleClick}>
+        <p>{this.props.letter}</p>
         <audio
           className='clip'
           src={this.props.source}

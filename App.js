@@ -108,11 +108,14 @@ handleClick(event) {
     <div id='container'>
 
     {
-      Object.keys(Sounds).map(s => (
+      Sounds.map(s => (
       <DrumPad
         id = {s.name}
         letter={s.key}
         source={s.source}
+        handleClick={this.handleClick}
+        handleKeyPress={this.handleClick}
+
         />
     ))}
 <Display currentSoundText={message} />
