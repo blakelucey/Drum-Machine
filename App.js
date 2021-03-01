@@ -112,9 +112,7 @@ handleClick(event) {
       <DrumPad
         id = {s.name}
         letter={s.key}
-        source={s.source}
-        handleClick={this.handleClick}
-        handleKeyPress={this.handleClick}
+        src={s.source}
 
         />
     ))}
