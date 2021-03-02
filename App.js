@@ -4,56 +4,56 @@ import React from 'react';
 import Display from './Display.js';
 
 const Sounds = [{
-  name: 'Cowbell',
-  source: 'dight310.byu.edu/media/audio/.../Cowbell Wav Sound-22317-Free-Loops.com.mp3',
+  name: 'Heater-1',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
   keycode: 81,
   key: 'Q',
 },
 {
-  name: 'Bongos',
-  source: 'dight310.byu.edu/media/audio/FreeLo.../Bongo Loop 4-9270-Free-Loops.com.mp3',
+  name: 'Heater-2',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3',
   keycode: 87,
   key: 'W',
 },
 {
-  name: 'Rimshot',
-  source: 'emmanuelprot.free.fr/Drums kit Manu/Rimshot.wav',
+  name: 'Heater-3',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
   keycode: 69,
   key: 'E'
 },
 {
-  name: 'Kazoo',
-  source: 'www.freesoundvault.com/sounds/sound_fx/FX_kazoo_1.wav',
+  name: 'Heater-4',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
   keycode: 65,
   key: 'A'
 },
 {
-  name: 'Snare',
-  source: 'bigsamples.free.fr/d_kit/snare/lg_snare.wav',
+  name: 'Heater-6',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3',
   keycode: 83,
   key: 'S'
 },
 {
-  name: 'High Hat',
-  source: 'bigsamples.free.fr/d_kit/hithat/hh2.wav',
+  name: 'Dsc Oh',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
   keycode: 68,
   key: 'D'
 },
 {
-  name: 'Ride',
-  source: 'www.burnkit2600.com/temp/HR-16/HR-16-WAVs/30-ride cymbal bell.wav',
+  name: 'Kick_n_Hat',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3',
   keycode: 90,
   key: 'Z'
 },
 {
-name: 'Ukulele',
-source: 'musicweb.ucsd.edu/~terbe/172/uke3.wav',
+name: 'RP4_KICK_1',
+source: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3',
 keycode: 88,
 key: 'X'
 },
 {
-  name: 'Timbale',
-  source: 'emmanuelprot.free.fr/Drums kit Manu/Low timbale.wav',
+  name: 'Cev_H2',
+  source: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3',
   keycode: 67,
   key: 'C'
 }];
@@ -61,12 +61,12 @@ key: 'X'
 class App extends React.Component  {
   constructor(props) {
     super(props);
-    this.state = {
-      currentSoundId : '',
-    };
+  //  this.state = {
+  //    currentSoundId : '',
+  //  };
     this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.playSound = this.playSound.bind(this);
+  //  this.handleClick = this.handleClick.bind(this);
+  //  this.playSound = this.playSound.bind(this);
   }
 
   //Define Component Did Mount, Component Will Unmount & playSound//
@@ -78,9 +78,10 @@ class App extends React.Component  {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
-  playSound() {
+/*  playSound() {
+
     document.getElementById(this.state.currentSoundId).play();
-  }
+  }*/
 
 
   //Define handleClick, handleKeyPress & playSound//
@@ -92,17 +93,16 @@ handleKeyPress(event) {
   this.setState({currentSoundId: (isValidKey)? key: ''});
 }
 
-handleClick(event) {
-  this.setState({currentSoundId: event.target.children[0].id });
-}
+//handleClick(event) {
+//  this.setState({currentSoundId: event.target.children[0].id });
+//}
 
 
   render(){
     let message = 'No sound';
-    if (this.state.currentSoundId) {
+  /*  if (this.state.currentSoundId) {
       message = `Sound: ${Sounds.name.key[this.state.currentSoundId]}`;
-      this.playSound();
-    }
+    }*/
   return (
     <div id='drum-machine'>
     <div id='container'>
