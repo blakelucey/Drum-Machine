@@ -34,7 +34,7 @@ const Sounds = [{
   key: 'S'
 },
 {
-  name: 'Dsc Oh',
+  name: 'Dsc-Oh',
   source: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
   keycode: 68,
   key: 'D'
