@@ -62,7 +62,7 @@ class App extends React.Component  {
 
   render(){
     let message = 'No sound';
-    /*if (DrumPad.played()) {
+    /*if (DrumPad.play()) {
       message = `Sound: ${Sounds.name.key}`;
     }*/
   return (
