@@ -5,11 +5,19 @@ import './DrumPad.css';
 
 class DrumPad extends React.Component{
 
+//Define handleClick
   handleClick = () => {
   const sound = document.querySelector(`#${this.props.letter}`)
   sound.play()
 }
 
+//Define componentDidMount and handleKeyPress
+componentDidMount() {
+    document.addEventListener("keydown", (e) => {
+      const sound = document.querySelector(`#${e.key.toUpperCase()}`);
+      sound && sound.play();
+    });
+}
 
   render() {
     return(

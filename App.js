@@ -59,37 +59,11 @@ key: 'X'
 }];
 
 class App extends React.Component  {
-  constructor(props) {
-    super(props);
-  //  this.state = {
-  //    currentSoundId : '',
-  //  };
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
-
-  //Define Component Did Mount & Component Will Unmount//
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyPress);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  }
-
-  //Define handleKeyPress//
-
-handleKeyPress = () => {
-  const sound = document.querySelector(`#${this.props.letter}`)
-  sound.play()
-}
-
-
-
 
   render(){
     let message = 'No sound';
-  /*  if (this.state.currentSoundId) {
-      message = `Sound: ${Sounds.name.key[this.state.currentSoundId]}`;
+    /*if (DrumPad.played()) {
+      message = `Sound: ${Sounds.name.key}`;
     }*/
   return (
     <div id='drum-machine'>
