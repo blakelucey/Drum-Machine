@@ -6,18 +6,19 @@ import './DrumPad.css';
 class DrumPad extends React.Component{
 
   handleClick = () => {
-  const sound = document.querySelector(`#${this.props.id}`)
+  const sound = document.querySelector(`#${this.props.letter}`)
   sound.play()
 }
 
+
   render() {
     return(
-      <div className = 'drum-pad' id = {this.props.id} onClick = {this.handleClick}>
+      <div className = 'drum-pad'  id = {this.props.id}  onClick = {this.handleClick}>
         <p>{this.props.letter}</p>
         <audio
           className='clip'
           src={this.props.src}
-          id = {this.props.id}
+          id = {this.props.letter}
           type='audio/mp3'
           >
         </audio>

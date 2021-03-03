@@ -65,11 +65,9 @@ class App extends React.Component  {
   //    currentSoundId : '',
   //  };
     this.handleKeyPress = this.handleKeyPress.bind(this);
-  //  this.handleClick = this.handleClick.bind(this);
-  //  this.playSound = this.playSound.bind(this);
   }
 
-  //Define Component Did Mount, Component Will Unmount & playSound//
+  //Define Component Did Mount & Component Will Unmount//
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyPress);
   }
@@ -78,24 +76,14 @@ class App extends React.Component  {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
-/*  playSound() {
+  //Define handleKeyPress//
 
-    document.getElementById(this.state.currentSoundId).play();
-  }*/
-
-
-  //Define handleClick, handleKeyPress & playSound//
-
-handleKeyPress(event) {
-  const key = Sounds[event.key.keycode];
-
-  const isValidKey = Object.keys(Sounds).includes(key);
-  this.setState({currentSoundId: (isValidKey)? key: ''});
+handleKeyPress = () => {
+  const sound = document.querySelector(`#${this.props.letter}`)
+  sound.play()
 }
 
-//handleClick(event) {
-//  this.setState({currentSoundId: event.target.children[0].id });
-//}
+
 
 
   render(){
