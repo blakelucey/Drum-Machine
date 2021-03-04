@@ -59,12 +59,16 @@ key: 'X'
 }];
 
 class App extends React.Component  {
+  constructor(props){
+    super(props)
+    this.state = {
+      message: 'No sound'
+    }
+  }
+  setMessage = (message) => this.setState({message});
 
   render(){
-    let message = 'No sound';
-    /*if (DrumPad.play()) {
-      message = `Sound: ${Sounds.name.key}`;
-    }*/
+
   return (
     <div id='drum-machine'>
     <div id='container'>
@@ -75,10 +79,11 @@ class App extends React.Component  {
         id = {s.name}
         letter={s.key}
         src={s.source}
+        setMessage={this.setMessage}
 
         />
     ))}
-<Display currentSoundText={message} />
+<Display currentSoundText={this.state.message} />
     </div>
     </div>
 

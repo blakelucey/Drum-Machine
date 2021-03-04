@@ -8,7 +8,8 @@ class DrumPad extends React.Component{
 //Define handleClick
   handleClick = () => {
   const sound = document.querySelector(`#${this.props.letter}`)
-  sound.play()
+  sound.play();
+  this.props.setMessage(this.props.id);
 }
 
 //Define componentDidMount and handleKeyPress
@@ -16,6 +17,7 @@ componentDidMount() {
     document.addEventListener("keydown", (e) => {
       const sound = document.querySelector(`#${e.key.toUpperCase()}`);
       sound && sound.play();
+      sound && this.props.setMessage(e.key.toUpperCase());
     });
 }
 
