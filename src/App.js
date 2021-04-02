@@ -70,6 +70,7 @@ class App extends React.Component  {
   render(){
 
   return (
+    <div className = 'background'>
     <div id='drum-machine'>
     <div id='container'>
 
@@ -86,6 +87,7 @@ class App extends React.Component  {
 <Display currentSoundText={this.state.message} />
     </div>
     </div>
+  </div>
 
   );
 }
