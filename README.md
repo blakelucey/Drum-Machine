@@ -1,5 +1,3 @@
-### App.js is the main file that I am working out of.  
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
